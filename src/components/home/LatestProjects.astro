@@ -28,10 +28,12 @@ const projects = [
       <div class="grid gap-8 lg:grid-cols-3">
         {
           projects.map((project) => (
-            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-              <p class="text-sm">{project.step}</p>
-              <div class="flex flex-col gap-4">
-                <h3 class="text-xl font-medium">{project.name}</h3>
+            <div
+            style="background-image: url(/assets/hero.webp);"
+            class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl bg-cover justify-end aspect-square">
+                
+              <div class="flex flex-col gap-4 p-6 backdrop-blur-md bg-primary-900/30 rounded-b-3xl">
+                <h3 class="text-2xl font-bold"><span class="text-sm mr-4">{project.step}</span> {project.name}</h3>
                 <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
                   {project.description}
                 </p>

@@ -13,7 +13,7 @@ module.exports = {
       primary: colors.stone,
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Jost', 'sans-serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
