@@ -1,0 +1,45 @@
+---
+const projects = [
+  {
+    step: '01',
+    name: 'Graggle',
+    description:
+      'Discover our CSS tool for creating radial gradients and applying them wherever you want.',
+  },
+  {
+    step: '02',
+    name: 'enzogonzalez.es',
+    description:
+      'Currently working on this blog, where I can have a window to the digital world and showcase my projects.',
+  },
+  {
+    step: '03',
+    name: 'Comming soon',
+    description:
+      'A personal-use focused CRM platform',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Latest Projects</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          projects.map((project) => (
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+              <p class="text-sm">{project.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{project.name}</h3>
+                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                  {project.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+---
+const jobs = [
+  [
+    {
+      date: 'may. 2022 - actualidad',
+      company: 'Blue Mountain',
+      jobTitle: 'Frontend developer',
+      description:
+        'Trabajando en proyectos de wordpress y prestashop aportando a la parte de diseño y experiencia de usuario aparte de la implementacion de soluciones',
+    },
+    {
+      date: 'jul. 2021 - dic. 2021',
+      company: 'Perfumerías Primor',
+      jobTitle: 'Frontend developer',
+      description:
+        'Pequeño proyecto basado en Prestashop en su versión 1.7 (basado en symfony), ocupando parte del desarrollo del tema de este e-commerce basado en Bootstrap 4.6, JS y JQuery, así como herramientas como SCSS y Gitlab parar control de versiones y repositorio.',
+    },
+  ],
+  [
+    {
+      date: 'jun. 2019 - jun. 2021',
+      company: 'Entersoftweb S.L',
+      jobTitle: 'Frontend developer',
+      description:
+        'Desarrollando y corrigiendo cuestiones de diseño en el frontend bajo symfony 2.8 y twig principalmente, además de utilizar JS y Jquery para complementar las funcionalidades de la aplicación y mejorar la experiencia a nuestros usuarios.',
+    },
+    {
+      date: 'mar. 2019 - jul. 2019',
+      company: 'FedeSoft SLU',
+      jobTitle: 'Frontend developer',
+      description:
+        'He desarrollado un rediseño de la marca a nivel estético, corrigiendo y mejorando la imagen que tienen actualmente, así como la linea visual que debe llevar el diseño de su web, la cual esta en desarrollo. También he maquetado documentos pdf dinámicos con xhtml2pdf en phyton así como crear templates con jinja2.',
+    },
+    {
+      date: 'abr. 2018 - jun. 2018',
+      company: 'SILBON',
+      jobTitle: 'Frontend developer',
+      description:
+        'He desempeñado tareas de modificación de aspectos visuales en la web de la empresa, configuración y maquetación en herramientas de marketing digital como salesmanago o ciertas modificaciones de prestashop, lo cual me ha permitido adquirir conocimientos sobre este CMS.',
+    }
+  ],
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-8 lg:gap-12">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Laboral Experience</h2>
+      <div class="grid gap-8 lg:grid-cols-2">
+        {
+          jobs.map((column, index) => (
+            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
+              {column.map((job) => (
+                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+                  <p class="text-sm">{job.date}</p>
+                  <div class="flex flex-col gap-4">
+                    <h3 class="text-2xl font-medium">{job.company} <br>
+                      <span class="text-xl font-light opacity-60">{job.jobTitle}</span>
+                    </h3>
+                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                      {job.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
