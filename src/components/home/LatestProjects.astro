@@ -3,20 +3,24 @@ const projects = [
   {
     step: '01',
     name: 'Graggle',
+    url: '',
     description:
       'Discover our CSS tool for creating radial gradients and applying them wherever you want.',
+    technologies: ['React', 'Typescript', 'Tailwind'],
   },
   {
     step: '02',
     name: 'enzogonzalez.es',
+    url: '',
     description:
       'Currently working on this blog, where I can have a window to the digital world and showcase my projects.',
+    technologies: ['Astro', 'Tailwind'],
   },
   {
     step: '03',
     name: 'Comming soon',
-    description:
-      'A personal-use focused CRM platform',
+    url: '',
+    description: 'A personal-use focused CRM platform',
   },
 ];
 ---
@@ -29,14 +33,21 @@ const projects = [
         {
           projects.map((project) => (
             <div
-            style="background-image: url(/assets/hero.webp);"
-            class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl bg-cover justify-end aspect-square">
-                
-              <div class="flex flex-col gap-4 p-6 backdrop-blur-md bg-primary-900/30 rounded-b-3xl">
-                <h3 class="text-2xl font-bold"><span class="text-sm mr-4">{project.step}</span> {project.name}</h3>
-                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+              style="background-image: url(/assets/hero.webp);"
+              class="card flex aspect-square flex-col justify-end gap-12 overflow-hidden rounded-3xl bg-primary-500/10 bg-cover dark:bg-primary-400/10"
+            >
+              <div class="hidden-content flex h-20 flex-col gap-4 overflow-hidden rounded-b-3xl bg-primary-100/70 p-6 backdrop-blur-md transition-all hover:bg-primary-100/80 dark:bg-primary-900/30 dark:hover:bg-primary-900/50">
+                <h3 class="text-2xl font-bold">
+                  <span class="mr-4 text-sm">{project.step}</span> {project.name}
+                </h3>
+                <p class="h-full text-base text-primary-950/80 dark:text-primary-200/80 sm:text-lg">
                   {project.description}
                 </p>
+                <ul class="flex gap-4">
+                  {project.technologies?.map((tech) => (
+                    <li>#{tech}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))
@@ -45,3 +56,9 @@ const projects = [
     </div>
   </div>
 </section>
+
+<style>
+  .card:hover .hidden-content {
+    height: 100%;
+  }
+</style>
