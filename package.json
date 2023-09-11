@@ -15,7 +15,7 @@
     "@fontsource/inter": "5.0.8",
     "@types/alpinejs": "3.7.2",
     "alpinejs": "3.12.3",
-    "astro": "2.10.13",
+    "astro": "^3.0.12",
     "astro-compress": "2.0.14",
     "prettier": "3.0.2",
     "prettier-plugin-astro": "0.12.0",

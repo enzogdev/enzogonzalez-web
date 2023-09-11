@@ -1,34 +1,11 @@
 ---
-const projects = [
-  {
-    step: '01',
-    name: 'Graggle',
-    url: '',
-    description:
-      'Discover our CSS tool for creating radial gradients and applying them wherever you want.',
-    technologies: ['React', 'Typescript', 'Tailwind'],
-  },
-  {
-    step: '02',
-    name: 'enzogonzalez.es',
-    url: '',
-    description:
-      'Currently working on this blog, where I can have a window to the digital world and showcase my projects.',
-    technologies: ['Astro', 'Tailwind'],
-  },
-  {
-    step: '03',
-    name: 'Comming soon',
-    url: '',
-    description: 'A personal-use focused CRM platform',
-  },
-];
+import { projects } from '../../services/projects';
 ---
 
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-12 sm:gap-16">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Latest Projects</h2>
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Últimos Proyectos</h2>
       <div class="grid gap-8 lg:grid-cols-3">
         {
           projects.map((project) => (

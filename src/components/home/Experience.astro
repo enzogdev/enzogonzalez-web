@@ -1,55 +1,14 @@
 ---
-const jobs = [
-  [
-    {
-      date: 'may. 2022 - actualidad',
-      company: 'Blue Mountain',
-      jobTitle: 'Mid Frontend developer',
-      description:
-        'Trabajando en proyectos de wordpress y prestashop aportando a la parte de diseño y experiencia de usuario aparte de la implementacion de soluciones',
-    },
-    {
-      date: 'jun. 2019 - jun. 2021',
-      company: 'Entersoftweb S.L',
-      jobTitle: 'Junior Web Developer',
-      description:
-        'Desarrollando y corrigiendo cuestiones de diseño en el frontend bajo symfony 2.8 y twig principalmente, además de utilizar JS y Jquery para complementar las funcionalidades de la aplicación y mejorar la experiencia a nuestros usuarios.',
-    },
-
-    {
-      date: 'abr. 2018 - jun. 2018',
-      company: 'SILBON',
-      jobTitle: 'Trainee Developer',
-      description:
-        'He desempeñado tareas de modificación de aspectos visuales en la web de la empresa, configuración y maquetación en herramientas de marketing digital como salesmanago o ciertas modificaciones de prestashop, lo cual me ha permitido adquirir conocimientos sobre este CMS.',
-    },
-  ],
-  [
-    {
-      date: 'jul. 2021 - dic. 2021',
-      company: 'Perfumerías Primor',
-      jobTitle: 'Frontend Developer',
-      description:
-        'Pequeño proyecto basado en Prestashop en su versión 1.7 (basado en symfony), ocupando parte del desarrollo del tema de este e-commerce basado en Bootstrap 4.6, JS y JQuery, así como herramientas como SCSS y Gitlab parar control de versiones y repositorio.',
-    },
-    {
-      date: 'mar. 2019 - jul. 2019',
-      company: 'FedeSoft SLU',
-      jobTitle: 'Web Designer',
-      description:
-        'He desarrollado un rediseño de la marca a nivel estético, corrigiendo y mejorando la imagen que tienen actualmente, así como la linea visual que debe llevar el diseño de su web, la cual esta en desarrollo. También he maquetado documentos pdf dinámicos con xhtml2pdf en phyton así como crear templates con jinja2.',
-    },
-  ],
-];
+import { experience } from '../../services/experience';
 ---
 
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-8 lg:gap-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Laboral Experience</h2>
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Experiencia Laboral</h2>
       <div class="grid gap-8 lg:grid-cols-2">
         {
-          jobs.map((column, index) => (
+          experience.map((column, index) => (
             <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
               {column.map((job) => (
                 <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
