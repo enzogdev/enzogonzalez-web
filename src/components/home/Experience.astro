@@ -1,5 +1,5 @@
 ---
-import { experience } from '../../services/experience';
+import { experience } from '../../data/experience.json';
 ---
 
 <section class="py-16 sm:py-20">
@@ -8,22 +8,24 @@ import { experience } from '../../services/experience';
       <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Experiencia Laboral</h2>
       <div class="grid gap-8 lg:grid-cols-2">
         {
-          experience.map((column, index) => (
-            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
-              {column.map((job) => (
-                <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
-                  <p class="text-sm">{job.date}</p>
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-2xl font-medium">
-                      {job.company} <br />
-                      <span class="text-xl font-light opacity-60">{job.jobTitle}</span>
-                    </h3>
-                    <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-                      {job.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+          experience.map((job, index) => (
+            <div
+              class:list={[
+                'job-card flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10',
+                { 'lg:translate-y-[50%]': index % 2 },
+              ]}
+              style={{ background: `url(${job.logo}), #fafafa` }}
+            >
+              <p class="text-sm">{job.date}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-2xl font-medium">
+                  {job.company} <br />
+                  <span class="text-xl font-light opacity-60">{job.jobTitle}</span>
+                </h3>
+                <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                  {job.description}
+                </p>
+              </div>
             </div>
           ))
         }
@@ -31,3 +33,12 @@ import { experience } from '../../services/experience';
     </div>
   </div>
 </section>
+
+<style>
+  .job-card {
+    background-position: top right;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+  }
+</style>
