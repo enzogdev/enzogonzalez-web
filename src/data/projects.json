@@ -1,25 +1,31 @@
 {
-    "projects": [
-      {
-        "step": "01",
-        "name": "Graggle",
-        "url": "",
-        "description": "Discover our CSS tool for creating radial gradients and applying them wherever you want.",
-        "technologies": ["React", "Typescript", "Tailwind"]
-      },
-      {
-        "step": "02",
-        "name": "enzogonzalez.es",
-        "url": "",
-        "description": "Currently working on this blog, where I can have a window to the digital world and showcase my projects.",
-        "technologies": ["Astro", "Tailwind"]
-      },
-      {
-        "step": "03",
-        "name": "Próximamente",
-        "url": "",
-        "description": "A personal-use focused CRM platform"
-      }
-    ]
-  }
-  
+  "projects": [
+    {
+      "description": "Discover our CSS tool for creating radial gradients and applying them wherever you want.",
+      "name": "Graggle",
+      "step": "01",
+      "technologies": [
+        "React",
+        "Typescript",
+        "Tailwind"
+      ],
+      "url": ""
+    },
+    {
+      "description": "Currently working on this blog, where I can have a window to the digital world and showcase my projects.",
+      "name": "enzogonzalez.es",
+      "step": "02",
+      "technologies": [
+        "Astro",
+        "Tailwind"
+      ],
+      "url": ""
+    },
+    {
+      "description": "A personal-use focused CRM platform",
+      "name": "Próximamente",
+      "step": "03",
+      "url": ""
+    }
+  ]
+}

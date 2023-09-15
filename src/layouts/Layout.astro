@@ -13,7 +13,7 @@ interface Props {
 const { description, title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
   <head>
     <meta charset="utf-8" />
@@ -28,7 +28,7 @@ const { description, title } = Astro.props;
     <ViewTransitions />
   </head>
   <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
+    class="overflow-x-hidden bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
   >
     <Header />
     <main>
