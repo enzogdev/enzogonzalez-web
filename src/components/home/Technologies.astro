@@ -6,16 +6,37 @@ import { technologies } from '../../data/technologies.json';
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-8 lg:gap-12">
       <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Tecnologías y software</h2>
-      <div class="tech-list inline-flex flex-wrap gap-6">
+      <p class="text-xl font-medium tracking-tight sm:text-xl text-primary-100/60">
+
+      </p>
+      <div class="tech-list inline-flex flex-nowrap gap-6">
         {
-          technologies.map((tech) => (
-            <div class="shrink-0 justify-center">
-              <span class="border-1 border--primary-950/70 relative flex  items-center justify-between gap-2 rounded-full border bg-transparent px-5 py-3 text-lg font-medium">
-                <img src={tech.icon} class="h-8" alt="" />
-                <span>{tech.name}</span>
-              </span>
-            </div>
-          ))
+          technologies.map((tech, index) => {
+            if (index % 2 === 0)
+              return(
+              <div class="shrink-0 justify-center">
+                <span class="border-1 border-primary-500/20 relative flex  items-center justify-between gap-2 rounded-full border bg-transparent dark:bg-primary-100 dark:text-primary-800 px-5 py-3 text-lg font-medium">
+                  <img src={tech.icon} class="h-8" alt="" />
+                  <span>{tech.name}</span>
+                </span>
+              </div>
+            )
+          })
+        }
+      </div>
+      <div class="tech-list inline-flex flex-nowrap gap-6 px-16">
+        {
+          technologies.map((tech, index) => {
+            if (index % 2 === 1)
+              return(
+              <div class="shrink-0 justify-center">
+                <span class="border-1 border-primary-500/20 relative flex  items-center justify-between gap-2 rounded-full border bg-transparent dark:bg-primary-100 dark:text-primary-800 px-5 py-3 text-lg font-medium">
+                  <img src={tech.icon} class="h-8" alt="" />
+                  <span>{tech.name}</span>
+                </span>
+              </div>
+            )
+          })
         }
       </div>
     </div>
@@ -24,7 +45,7 @@ import { technologies } from '../../data/technologies.json';
 
 <style>
   .tech-list {
-    animation: slide 30s linear infinite;
+    animation: slide 50s linear infinite;
     transform: translateX(0);
   }
   @keyframes slide {
@@ -32,7 +53,7 @@ import { technologies } from '../../data/technologies.json';
       transform: translate(0);
     }
     100% {
-      transform: translate(-100%);
+      transform: translate(-300%);
     }
   }
 </style>
