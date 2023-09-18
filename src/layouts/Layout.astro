@@ -14,7 +14,7 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
+<html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }" class="overflow-x-hidden">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -28,7 +28,7 @@ const { description, title } = Astro.props;
     <ViewTransitions />
   </head>
   <body
-    class="overflow-x-hidden bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
+    class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200 overflow-x-hidden"
   >
     <Header />
     <main>
