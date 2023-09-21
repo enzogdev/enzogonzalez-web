@@ -3,17 +3,20 @@
     {
       "description": "Discover our CSS tool for creating radial gradients and applying them wherever you want.",
       "name": "Graggle",
+      "slug": "graggle",
       "step": "01",
       "technologies": [
         "React",
         "Typescript",
-        "Tailwind"
+        "Tailwind",
+        "Redux"
       ],
-      "url": ""
+      "url": "https://graggle-nine.vercel.app/"
     },
     {
       "description": "Currently working on this blog, where I can have a window to the digital world and showcase my projects.",
       "name": "enzogonzalez.es",
+      "slug": "enzogonzalez-web",
       "step": "02",
       "technologies": [
         "Astro",
@@ -24,6 +27,7 @@
     {
       "description": "A personal-use focused CRM platform",
       "name": "Próximamente",
+      "slug": " ",
       "step": "03",
       "url": ""
     }
