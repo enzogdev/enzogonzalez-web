@@ -1,0 +1,40 @@
+---
+import Button from '../ui/Button.astro';
+
+const { name, description, url, technologies } = Astro.props['project'];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex w-full flex-row-reverse flex-col items-stretch gap-16 md:flex-row">
+      <div
+        class="sm: aspect-[16/9] h-auto w-full rounded-3xl"
+        style="background-image:url('/assets/hero.webp')"
+      >
+      </div>
+      <div class="my-12 flex w-full flex-col items-start gap-8 sm:gap-10">
+        <div class="flex flex-row flex-wrap gap-x-2">
+          {
+            technologies.map((tech: { name: string }) => (
+              <div class="shrink-0">
+                <span class="border-1 relative flex items-center justify-between gap-2 rounded-full border border-primary-500/30 bg-transparent px-3 py-1 text-sm font-medium dark:border-primary-100/30  dark:text-primary-100">
+                  <span>#{tech}</span>
+                </span>
+              </div>
+            ))
+          }
+        </div>
+        <div class="flex flex-col items-start gap-4 sm:gap-6">
+          <h1 class="text-6xl font-black tracking-tight">
+            {name}
+          </h1>
+          <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+            {description}
+          </p>
+        </div>
+
+        <Button title={'Visitar ' + name} url={url} />
+      </div>
+    </div>
+  </div>
+</section>

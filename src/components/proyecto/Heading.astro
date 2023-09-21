@@ -1,0 +1,43 @@
+---
+import Button from '../ui/Button.astro';
+console.log(Astro.props);
+const { description, name, url, slug } = Astro.props['project'];
+---
+
+<section
+  class="bg-cover py-16 sm:py-20"
+  style={`background-image:url('/assets/projects/${slug}/background-dark.jpg')`}
+>
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex w-full flex-row-reverse flex-col items-stretch gap-16 md:flex-row">
+      <div class="sm: aspect-[16/9] h-auto w-full rounded-3xl"></div>
+      <div class="my-12 flex w-full flex-col items-start gap-8 sm:gap-10">
+        <div class="flex flex-row flex-wrap gap-x-2"></div>
+        <div class="flex flex-col items-start gap-4 sm:gap-6">
+          <h1 class="text-6xl font-black tracking-tight">
+            {name}
+          </h1>
+          <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+            {description}
+          </p>
+        </div>
+
+        <Button title={'Visitar ' + name} url={url} />
+      </div>
+    </div>
+  </div>
+  <img class="image w-full" src={`/assets/projects/${slug}/desktop-transparent.png`} alt="" />
+</section>
+<style>
+  .image {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+</style>
