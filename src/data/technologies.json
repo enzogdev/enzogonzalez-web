@@ -91,6 +91,10 @@
         {
             "icon": "/assets/technology/vscode.svg",
             "name": "VS Code"
+        },
+        {
+            "icon": "/assets/technology/redux.svg",
+            "name": "Redux"
         }
     ]
 }
