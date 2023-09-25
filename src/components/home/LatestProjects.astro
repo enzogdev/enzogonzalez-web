@@ -9,7 +9,8 @@ import { projects } from '../../data/projects.json';
       <div class="grid gap-8 lg:grid-cols-3">
         {
           projects.map((project) => (
-            <div
+            <a
+              href={`/proyectos/${project.slug}`}
               style={`background-image: url(/assets/projects/${project.slug}/square-cover-dark.png);`}
               class="card flex aspect-square flex-col justify-end gap-12 overflow-hidden rounded-3xl bg-primary-500/10 bg-cover dark:bg-primary-400/10"
             >
@@ -26,7 +27,7 @@ import { projects } from '../../data/projects.json';
                   ))}
                 </ul>
               </div>
-            </div>
+            </a>
           ))
         }
       </div>
