@@ -1,39 +1,25 @@
 ---
 import { projects } from '../../data/projects.json';
+import Bento from '../ui/Bento.astro';
+import Container from '../ui/Container.astro';
 ---
 
-<section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-12 sm:gap-16">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Últimos Proyectos</h2>
-      <div class="grid gap-8 lg:grid-cols-3">
-        {
-          projects.map((project) => (
-            <a
-              href={`/proyectos/${project.slug}`}
-              style={`background-image: url(/assets/projects/${project.slug}/square-cover-dark.png);`}
-              class="card flex aspect-square flex-col justify-end gap-12 overflow-hidden rounded-3xl bg-primary-500/10 bg-cover dark:bg-primary-400/10"
-            >
-              <div class="hidden-content flex h-20 flex-col gap-4 overflow-hidden rounded-b-3xl bg-primary-100/70 p-6 backdrop-blur-md transition-all hover:bg-primary-100/80 dark:bg-primary-900/30 dark:hover:bg-primary-900/50">
-                <h3 class="text-2xl font-bold">
-                  <span class="mr-4 text-sm">{project.step}</span> {project.name}
-                </h3>
-                <p class="h-full text-base text-primary-950/80 dark:text-primary-200/80 sm:text-lg">
-                  {project.description}
-                </p>
-                <ul class="flex gap-4">
-                  {project.technologies?.map((tech) => (
-                    <li>#{tech}</li>
-                  ))}
-                </ul>
-              </div>
-            </a>
-          ))
-        }
-      </div>
-    </div>
+<Container>
+  <div class="flex w-full gap-4 lg:flex-col">
+    <Bento class="aspect-square w-full md:aspect-auto lg:h-full xl:aspect-square">Linkedin</Bento>
+    <Bento class="aspect-square w-full md:aspect-auto lg:h-full xl:aspect-square">Github</Bento>
   </div>
-</section>
+  <Bento class="w-auto">
+    <p class="text-3xl font-medium lg:text-6xl">
+      As a digital designer, I specialize in creating unique visual identities for digital products.<span
+        class="opacity-60"
+      >
+        I believe that a catchy design starts with common values, open communication, and respect
+        for your audience.</span
+      >
+    </p>
+  </Bento>
+</Container>
 
 <style>
   .card:hover .hidden-content {

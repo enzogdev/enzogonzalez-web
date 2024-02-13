@@ -1,42 +1,61 @@
 ---
 import { technologies } from '../../data/technologies.json';
+import Bento from '../ui/Bento.astro';
+import Container from '../ui/Container.astro';
 ---
 
-<section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-8 lg:gap-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Tecnologías y software</h2>
-      <p class="text-xl font-medium tracking-tight dark:text-primary-100/60 sm:text-xl">
-        A lo largo de mi carrera he aprendido a utilizar gran cantidad de software y tecnologías,
-        pero a día de hoy lo más valioso que tengo es mi capacidad para adaptarme a nuevos retos
-      </p>
-      <div class="tech-list inline-flex w-[210%] flex-wrap justify-center gap-6">
-        {
-          technologies.map((tech) => (
-            <div class="shrink-0 justify-center">
-              <span class="border-1 relative flex items-center  justify-between gap-2 rounded-full border border-primary-500/20 bg-transparent px-5 py-3 text-lg font-medium dark:bg-primary-100 dark:text-primary-800">
-                <img src={tech.icon} class="h-8" alt="" />
-                <span>{tech.name}</span>
-              </span>
-            </div>
-          ))
-        }
+<Container>
+  <Bento class="relative flex-col gap-8 overflow-hidden">
+    <div class="flex flex-col lg:flex-row">
+      <h2 class="mb-4 w-full text-6xl font-medium tracking-tight lg:w-2/5">
+        <span class="opacity-60">Techs and</span><br /> Software
+      </h2>
+      <div class="flex w-full flex-col gap-12 lg:w-3/5">
+        <p class="text-xl font-medium">
+          A lo largo de mi carrera he aprendido a utilizar gran cantidad de software y tecnologías,
+          pero a día de hoy lo más valioso que tengo es mi capacidad para adaptarme a nuevos retos
+        </p>
+        <ul class="flex flex-wrap gap-4">
+          {
+            technologies.map((tech) => (
+              <li class="shrink-0">
+                <span class="border-1 relative flex items-center  justify-between gap-2 rounded-full border border-primary-500/20 bg-transparent px-5 py-3 text-lg font-medium dark:bg-primary-100 dark:text-primary-800">
+                  <img src={tech.icon} class="h-8" alt="" />
+                  <span>{tech.name}</span>
+                </span>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
-  </div>
+    <svg
+      class="spin absolute left-[0] top-[50px] -z-10 md:left-[-320px] lg:top-0"
+      width="1000"
+      height="1000"
+      viewBox="0 0 300 300"
+    >
+      <defs>
+        <path id="circlePath" d="M150 150 m -60 0 a 60 60 0 1 1 120 0 a 60 60 0 1 1 -120 0"></path>
+      </defs>
+      <circle cx="150" cy="150" r="75" fill="none"></circle>
+      <text fill="#fff">
+        <textPath xlink:href="#circlePath">CONSTANTLY UPDATED | CONSTANTLY UPDATED |</textPath>
+      </text>
+    </svg>
+  </Bento>
+</Container>
 
-  <style>
-    .tech-list {
-      animation: slide 50s linear infinite;
-      transform: translateX(-50%);
+<style>
+  .spin {
+    animation: spin 10s infinite linear;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(360deg);
     }
-    @keyframes slide {
-      0% {
-        transform: translate(0);
-      }
-      100% {
-        transform: translate(-50%);
-      }
+    to {
+      transform: rotate(0);
     }
-  </style>
-</section>
+  }
+</style>

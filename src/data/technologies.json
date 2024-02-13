@@ -5,10 +5,6 @@
             "name": "React"
         },
         {
-            "icon": "/assets/technology/css3.svg",
-            "name": "CSS3"
-        },
-        {
             "icon": "/assets/technology/figma.svg",
             "name": "Figma"
         },
@@ -21,20 +17,8 @@
             "name": "Gitlab"
         },
         {
-            "icon": "/assets/technology/html5.svg",
-            "name": "HTML5"
-        },
-        {
-            "icon": "/assets/technology/illustrator.svg",
-            "name": "Adobe Illustrator"
-        },
-        {
             "icon": "/assets/technology/javascript.svg",
             "name": "Javascript"
-        },
-        {
-            "icon": "/assets/technology/photoshop.svg",
-            "name": "Adobe Photoshop"
         },
         {
             "icon": "/assets/technology/php.svg",
@@ -59,38 +43,6 @@
         {
             "icon": "/assets/technology/wordpress.svg",
             "name": "Wordpress"
-        },
-        {
-            "icon": "/assets/technology/trello.svg",
-            "name": "Trello"
-        },
-        {
-            "icon": "/assets/technology/slack.svg",
-            "name": "Slack"
-        },
-        {
-            "icon": "/assets/technology/notion.svg",
-            "name": "Notion"
-        },
-        {
-            "icon": "/assets/technology/keepass.svg",
-            "name": "Keepass"
-        },
-        {
-            "icon": "/assets/technology/chrome.svg",
-            "name": "Chrome"
-        },
-        {
-            "icon": "/assets/technology/firefox.svg",
-            "name": "Mozilla Firefox"
-        },
-        {
-            "icon": "/assets/technology/safari.svg",
-            "name": "Safari"
-        },
-        {
-            "icon": "/assets/technology/vscode.svg",
-            "name": "VS Code"
         },
         {
             "icon": "/assets/technology/redux.svg",

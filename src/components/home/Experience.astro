@@ -1,34 +1,36 @@
 ---
 import { experience } from '../../data/experience.json';
+import Avatar from '../ui/Avatar.astro';
+import Bento from '../ui/Bento.astro';
+import Container from '../ui/Container.astro';
 ---
 
-<section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-8 lg:gap-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Experiencia Laboral</h2>
-      <div class="grid gap-8 lg:grid-cols-2">
-        {
-          experience.map((job, index) => (
-            <div
-              class:list={[
-                'job-card relative flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10',
-                { 'lg:translate-y-[50%]': index % 2 },
-              ]}
-            >
-              <p class="text-sm">{job.date}</p>
+<Container>
+  <div class="flex grid-cols-2 grid-rows-6 flex-col gap-4 lg:grid">
+    <Bento class="row-start-1 bg-transparent">
+      <h2 class="text-6xl font-medium tracking-tight">
+        <span class="opacity-60">Laboral</span>
+        <br />Experience
+      </h2>
+    </Bento>
+    {
+      experience.map((job, index) => (
+        <Bento class:list={['row-span-2', `row-start-${index + 1}`]}>
+          <div class="flex flex-col gap-12 pb-8 md:flex-row">
+            <Avatar src="/assets/hero.webp" />
+            <div>
+              <p class="text-sm uppercase opacity-60">{job.date}</p>
               <div class="flex flex-col gap-4">
-                <h3 class="text-2xl font-medium">
+                <h3 class="text-4xl font-medium">
                   {job.company} <br />
-                  <span class="text-xl font-light opacity-60">{job.jobTitle}</span>
+                  <span class="text-2xl font-light opacity-60">{job.jobTitle}</span>
                 </h3>
-                <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-                  {job.description}
-                </p>
               </div>
             </div>
-          ))
-        }
-      </div>
-    </div>
+          </div>
+          <p class="text-lg">{job.description}</p>
+        </Bento>
+      ))
+    }
   </div>
-</section>
+</Container>

@@ -1,0 +1,10 @@
+---
+const { class: className, style } = Astro.props;
+---
+
+<div
+  class:list={['revealing-bento rounded-3xl bg-primary-500/10 p-4 lg:p-12', className]}
+  style={style}
+>
+  <slot />
+</div>
