@@ -12,6 +12,7 @@ module.exports = {
       white: '#ffffff',
       black: '#000000',
       primary: colors.stone,
+      accent: '#462fef'
     },
     fontFamily: {
       sans: ['Jost', 'sans-serif'],
