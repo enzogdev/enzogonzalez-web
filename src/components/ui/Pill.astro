@@ -9,6 +9,6 @@ const { class: className, title, icon, ...rest } = Astro.props;
   ]}
   {...rest}
 >
-  <img src={icon} class="h-8 drop-shadow-sm" />
+  <img src={icon} alt={title + ' icon'} class="h-8 drop-shadow-sm" />
   {title}
 </span>

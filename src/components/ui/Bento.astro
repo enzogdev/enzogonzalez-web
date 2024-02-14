@@ -18,25 +18,26 @@ const { class: className, ...rest } = Astro.props;
     transform: translateZ(0);
     -webkit-font-smoothing: subpixel-antialiased;
   }
+  /* @TODO fix blurred in text when bento scaled  */
   @keyframes reveal {
     entry 0% {
       opacity: 0;
-      scale: 0.95;
+      /* scale: 0.95; */
       transform: translateY(5%);
     }
     entry 100% {
       opacity: 1;
-      scale: 1;
+      /* scale: 1; */
       transform: translateY(0);
     }
     exit 0% {
       opacity: 1;
-      scale: 1;
+      /* scale: 1; */
       transform: translateY(0);
     }
     exit 100% {
       opacity: 0;
-      scale: 0.95;
+      /* scale: 0.95; */
       transform: translateY(-5%);
     }
   }
