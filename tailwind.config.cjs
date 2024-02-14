@@ -10,6 +10,7 @@ module.exports = {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
+      black: '#000000',
       primary: colors.stone,
     },
     fontFamily: {

@@ -2,6 +2,7 @@
 import { technologies } from '../../data/technologies.json';
 import Bento from '../ui/Bento.astro';
 import Container from '../ui/Container.astro';
+import Pill from '../ui/Pill.astro';
 ---
 
 <Container>
@@ -19,10 +20,7 @@ import Container from '../ui/Container.astro';
           {
             technologies.map((tech) => (
               <li class="shrink-0">
-                <span class="border-1 relative flex items-center  justify-between gap-2 rounded-full border border-primary-500/20 bg-transparent px-5 py-3 text-lg font-medium dark:bg-primary-100 dark:text-primary-800">
-                  <img src={tech.icon} class="h-8" alt="" />
-                  <span>{tech.name}</span>
-                </span>
+                <Pill title={tech.name} icon={tech.icon} />
               </li>
             ))
           }
@@ -40,7 +38,7 @@ import Container from '../ui/Container.astro';
       </defs>
       <circle cx="150" cy="150" r="75" fill="none"></circle>
       <text fill="#fff">
-        <textPath xlink:href="#circlePath">CONSTANTLY UPDATED | CONSTANTLY UPDATED |</textPath>
+        <textPath xlink:href="#circlePath">✏️DESIGN ⌨️ DEVELOP 🥳 USER EXPERIENCE</textPath>
       </text>
     </svg>
   </Bento>

@@ -1,0 +1,14 @@
+---
+const { class: className, title, icon, ...rest } = Astro.props;
+---
+
+<span
+  class:list={[
+    'text-black flex items-center gap-4 rounded-full border border-solid bg-primary-100/90  px-5 py-2',
+    className,
+  ]}
+  {...rest}
+>
+  <img src={icon} class="h-8 drop-shadow-sm" />
+  {title}
+</span>

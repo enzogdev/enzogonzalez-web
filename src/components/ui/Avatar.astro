@@ -1,5 +1,5 @@
 ---
-const { src } = Astro.props;
+const { class: className, ...rest } = Astro.props;
 ---
 
-<img class="aspect-square w-[128px] rounded-full" src={src} />
+<img class:list={['aspect-square w-[128px] rounded-full bg-cover', className]} {...rest} />

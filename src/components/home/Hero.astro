@@ -6,15 +6,19 @@ import Container from '../ui/Container.astro';
 
 <Container>
   <Bento class="flex flex-col lg:w-3/5">
-    <Avatar src="/assets/hero.webp" />
+    <Avatar alt="enzo gonzález face" src="/assets/hero.webp" />
 
     <h1 class="text-5xl font-medium lg:text-6xl">
       enzo gonzález is a frontend developer.<span class="opacity-60">
-        currently developing at Blue Mountain.</span
+        currently developing at Blue Mountain Consulting.</span
       >
     </h1>
   </Bento>
-  <Bento class="bg-cover lg:w-2/5" style="background-image:url('/assets/hero.webp')">
+  <Bento
+    class="flex flex-col justify-between bg-cover lg:w-2/5"
+    style="background-image:url('/assets/hero.webp')"
+  >
+    <p class="text-medium mb-12 text-center text-4xl lg:text-6xl">Have a project in mind?</p>
     <a
       href="mailto:info@enzogonzalez.es"
       class="inline-flex w-full justify-center rounded-full bg-primary-400 px-5 py-3 text-3xl font-bold text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
