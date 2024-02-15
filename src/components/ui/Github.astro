@@ -1,0 +1,53 @@
+---
+import { Bento } from '@ui';
+const items = [];
+for (let index = 0; index < 7; index++) {
+  items.push(index);
+}
+---
+
+<a href="#">
+  <Bento
+    class="wraper group aspect-square h-full min-h-[150px] w-full place-items-center overflow-hidden lg:p-2 xl:aspect-square"
+  >
+    <img
+      class="absolute left-1/2 top-1/2 z-10 aspect-square w-16 -translate-x-1/2 -translate-y-1/2 transition-transform will-change-transform group-hover:-translate-y-2/3 group-hover:scale-150 group-hover:shadow-xl dark:invert"
+      src="assets/github.webp"
+    />
+    <Fragment>
+      {
+        items.map(() => (
+          <div class=" z-0 flex -translate-y-20 place-items-center justify-around gap-0 text-6xl font-bold opacity-5 transition-all group-hover:opacity-20">
+            <span aria-readonly>G</span>
+            <span aria-readonly>I</span>
+            <span aria-readonly>T</span>
+            <span aria-readonly>H</span>
+            <span aria-readonly>U</span>
+            <span aria-readonly>B</span>
+          </div>
+        ))
+      }
+    </Fragment>
+  </Bento>
+</a>
+<style is:global>
+  /* .wraper:hover > div {
+    } */
+  .wraper span:nth-of-type(odd) {
+    animation: scrollUp 2s 0.25s infinite linear;
+  }
+  .wraper span:nth-of-type(even) {
+    animation: scrollDown 2s 0.25s infinite linear;
+  }
+
+  @keyframes scrollUp {
+    to {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes scrollDown {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+</style>

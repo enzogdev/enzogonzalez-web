@@ -1,15 +1,11 @@
 ---
-import { Bento, Container } from '@ui';
+import { Bento, Container, Linkedin, Github } from '@ui';
 ---
 
 <Container>
   <div class="flex w-full gap-4 lg:flex-col">
-    <Bento class="aspect-square h-full min-h-[150px] w-full md:aspect-auto xl:aspect-square">
-      Linkedin
-    </Bento>
-    <Bento class="aspect-square h-full min-h-[150px] w-full md:aspect-auto xl:aspect-square">
-      Github
-    </Bento>
+    <Linkedin />
+    <Github />
   </div>
   <Bento>
     <p class="text-3xl font-medium lg:text-6xl">
@@ -22,13 +18,3 @@ import { Bento, Container } from '@ui';
     </p>
   </Bento>
 </Container>
-
-<style>
-  .card:hover .hidden-content {
-    height: 100%;
-  }
-
-  .wrapper {
-    width: calc(100% + 50px);
-  }
-</style>
