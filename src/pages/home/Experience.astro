@@ -1,37 +1,19 @@
 ---
 import { experience } from '../../data/experience.json';
-import { Avatar, Bento, Container } from '@ui';
+import { Bento, Container, ProjectCard } from '@ui';
 ---
 
 <Container>
-  <section id="sectionPin">
-    <div class="pin-wrap-sticky">
-      <div class="pin-wrap flex gap-4">
+  <section id="horizontal-scroll-section">
+    <div class="card-wrap-sticky">
+      <div class="card-wrap flex gap-4">
         <Bento class="bg-transparent">
           <h2 class="text-6xl font-medium tracking-tight">
-            <span class="opacity-60">Laboral</span>
-            <br />Experience
+            <span class="opacity-60">Improved</span>
+            <br />projects
           </h2>
         </Bento>
-        {
-          experience.map((job, index) => (
-            <Bento class="job-card">
-              <div class="flex flex-col gap-12 pb-8 md:flex-row">
-                <Avatar alt={job.company + ' logo'} src="/assets/hero.webp" />
-                <div>
-                  <p class="text-sm uppercase opacity-60">{job.date}</p>
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-4xl font-medium">
-                      {job.company} <br />
-                      <span class="text-2xl font-light opacity-60">{job.jobTitle}</span>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <p class="text-lg">{job.description}</p>
-            </Bento>
-          ))
-        }
+        {experience.map((job, index) => <ProjectCard job={job} />)}
       </div>
     </div>
   </section>
@@ -45,35 +27,48 @@ import { Avatar, Bento, Container } from '@ui';
         left: 0px;
       }
     }
-
-    #sectionPin {
-      --items-count: 5;
+    @keyframes parallax {
+      to {
+        object-position: 0 0;
+      }
+    }
+    #horizontal-scroll-section {
+      --items-count: 7;
       --items-width: 48rem;
+
       /* Ajusta el ancho del contenedor de scroll */
       width: calc(var(--items-count) * var(--items-width));
-      /* Elimina el ajuste de altura, ya que ahora solo queremos que se extienda horizontalmente */
       height: 200vh;
       /* Asegura que la animación cubra el ancho total del contenedor de scroll */
-      view-timeline-name: --section-pin-tl;
+      view-timeline-name: --horizontal-scroll-section;
       view-timeline-axis: block;
     }
 
-    .job-card {
-      width: var(--items-width);
-    }
-
-    .pin-wrap-sticky {
-      /* width: 100vw; */
+    .card-wrap-sticky {
       position: sticky;
       top: 20%;
     }
 
-    .pin-wrap {
+    .card-wrap {
       width: calc(var(--items-width) * var(--items-count));
-      will-change: transform;
       animation: linear move forwards;
-      animation-timeline: --section-pin-tl;
+      animation-timeline: --horizontal-scroll-section;
       animation-range: contain -20% contain 139%;
+    }
+    /* Styles for parallax effect */
+
+    @keyframes adjust-image {
+      0% {
+        object-position: 100% 0;
+      }
+      100% {
+        object-position: 0 0;
+      }
+    }
+
+    .job-card img {
+      animation: linear adjust-image forwards;
+      animation-timeline: --horizontal-scroll-section;
     }
   }
 </style>

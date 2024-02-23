@@ -6,28 +6,27 @@ for (let index = 0; index < 7; index++) {
 }
 ---
 
-<a href="#">
+<a href="https://github.com/enzogdev?tab=repositories">
   <Bento
     class="wraper group aspect-square h-full min-h-[150px] w-full place-items-center overflow-hidden lg:p-2 xl:aspect-square"
   >
     <img
+      alt="Github Logo"
       class="absolute left-1/2 top-1/2 z-10 aspect-square w-16 -translate-x-1/2 -translate-y-1/2 transition-transform will-change-transform group-hover:-translate-y-2/3 group-hover:scale-150 group-hover:shadow-xl dark:invert"
       src="assets/github.webp"
     />
-    <Fragment>
-      {
-        items.map(() => (
-          <div class="z-0 flex -translate-y-20 select-none place-items-center justify-around gap-0 text-6xl font-bold opacity-5 transition-all group-hover:opacity-20">
-            <span aria-disabled>G</span>
-            <span aria-disabled>I</span>
-            <span aria-disabled>T</span>
-            <span aria-disabled>H</span>
-            <span aria-disabled>U</span>
-            <span aria-disabled>B</span>
-          </div>
-        ))
-      }
-    </Fragment>
+    {
+      items.map(() => (
+        <div class="z-0 flex -translate-y-20 select-none place-items-center justify-around gap-0 text-6xl font-bold opacity-5 transition-all group-hover:opacity-20">
+          <span aria-disabled>G</span>
+          <span aria-disabled>I</span>
+          <span aria-disabled>T</span>
+          <span aria-disabled>H</span>
+          <span aria-disabled>U</span>
+          <span aria-disabled>B</span>
+        </div>
+      ))
+    }
   </Bento>
 </a>
 <style is:global>

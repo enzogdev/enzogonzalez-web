@@ -1,5 +1,5 @@
 {
-  "name": "astro-theme-stone",
+  "name": "enzo-gonzalez-web",
   "type": "module",
   "version": "1.0.0",
   "scripts": {
@@ -20,6 +20,6 @@
     "prettier": "3.0.2",
     "prettier-plugin-astro": "0.12.0",
     "prettier-plugin-tailwindcss": "0.5.3",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "3.4.1"
   }
 }

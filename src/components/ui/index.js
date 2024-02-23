@@ -5,3 +5,5 @@ export { default as Avatar } from './Avatar.astro';
 export { default as Button } from './Button.astro';
 export { default as Linkedin } from './Linkedin.astro';
 export { default as Github } from './Github.astro';
+export { default as JobCard } from './JobCard.astro';
+export { default as ProjectCard } from './ProjectCard.astro';
