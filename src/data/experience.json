@@ -2,56 +2,63 @@
   "experience": [
     {
       "company": "Blue Mountain",
+      "slug": "blue-mountain",
       "logo": "",
-      "image": "assets/projects/blue-mountain.webp",
+      "image": "/assets/projects/blue-mountain.webp",
       "date": "may. 2022 - actualidad",
       "description": "Trabajando en proyectos de wordpress y prestashop aportando a la parte de diseño y experiencia de usuario aparte de la implementación de soluciones",
       "jobTitle": "Mid Frontend developer"
     },
     {
       "company": "Logistics Express",
+      "slug": "logistics-express",
       "logo": "",
-      "image": "assets/projects/logistics-express.webp",
+      "image": "/assets/projects/logistics-express.webp",
       "date": "may. 2022 - actualidad",
       "description": "Trabajando en proyectos de wordpress y prestashop aportando a la parte de diseño y experiencia de usuario aparte de la implementación de soluciones",
       "jobTitle": "Mid Frontend developer"
     },
     {
       "company": "The Secret Yacht",
+      "slug": "the-secret-yacht",
       "logo": "",
-      "image": "assets/projects/the-secret-yacht.webp",
+      "image": "/assets/projects/the-secret-yacht.webp",
       "date": "may. 2022 - actualidad",
       "description": "Trabajando en proyectos de wordpress y prestashop aportando a la parte de diseño y experiencia de usuario aparte de la implementación de soluciones",
       "jobTitle": "Mid Frontend developer"
     },
     {
       "company": "Primor",
+      "slug": "primor",
       "logo": "",
-      "image": "assets/projects/primor.webp",
+      "image": "/assets/projects/primor.webp",
       "date": "jul. 2021 - dic. 2021",
       "description": "Pequeño proyecto basado en Prestashop en su versión 1.7 (basado en symfony), ocupando parte del desarrollo del tema de este e-commerce basado en Bootstrap 4.6, JS y JQuery, así como herramientas como SCSS y Gitlab para control de versiones y repositorio.",
       "jobTitle": "Frontend Developer"
     },
     {
       "company": "Entersoftweb",
+      "slug": "entersoftweb",
       "logo": "",
-      "image": "assets/projects/entersoftweb.webp",
+      "image": "/assets/projects/entersoftweb.webp",
       "date": "jun. 2019 - jun. 2021",
       "description": "Desarrollando y corrigiendo cuestiones de diseño en el frontend bajo symfony 2.8 y twig principalmente, además de utilizar JS y Jquery para complementar las funcionalidades de la aplicación y mejorar la experiencia a nuestros usuarios.",
       "jobTitle": "Junior Web Developer"
     },
     {
       "company": "Fedesoft",
+      "slug": "fedesoft",
       "logo": "",
-      "image": "assets/projects/fedesoft.webp",
+      "image": "/assets/projects/fedesoft.webp",
       "date": "mar. 2019 - jul. 2019",
       "description": "He desarrollado un rediseño de la marca a nivel estético, corrigiendo y mejorando la imagen que tienen actualmente, así como la línea visual que debe llevar el diseño de su web, la cual está en desarrollo. También he maquetado documentos pdf dinámicos con xhtml2pdf en phyton así como crear templates con jinja2.",
       "jobTitle": "Web Designer"
     },
     {
       "company": "Silbon",
+      "slug": "silbon",
       "logo": "",
-      "image": "assets/projects/silbon.webp",
+      "image": "/assets/projects/silbon.webp",
       "date": "abr. 2018 - jun. 2018",
       "description": "He desempeñado tareas de modificación de aspectos visuales en la web de la empresa, configuración y maquetación en herramientas de marketing digital como salesmanago o ciertas modificaciones de prestashop, lo cual me ha permitido adquirir conocimientos sobre este CMS.",
       "jobTitle": "Trainee Developer"

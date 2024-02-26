@@ -1,32 +1,8 @@
 ---
-import Bento from '../ui/Bento.astro';
-import Container from '../ui/Container.astro';
-
-const links = [
-  {
-    ref: '01',
-    name: 'Inicio',
-    href: '/',
-  },
-  {
-    ref: '02',
-    name: 'Sobre mí',
-    href: '/sobre-mi',
-  },
-  {
-    ref: '03',
-    name: 'Proyectos',
-    href: '/proyectos',
-  },
-  {
-    ref: '04',
-    name: 'Contacto',
-    href: '/contacto',
-  },
-];
+import { Bento, Container } from '@ui';
 ---
 
-<header>
+<header transition:name="header-navbar">
   <Container>
     <Bento class="mt-4 flex w-full items-center justify-between py-1 lg:py-1">
       <!-- Brand logo -->
