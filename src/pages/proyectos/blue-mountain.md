@@ -8,20 +8,98 @@ image:
 tags: ['astro', 'bloguear', 'aprender en público']
 ---
 
-# Mi primera publicación en el blog
+# Ejemplo de Página Markdown
 
-Publicado el: 2022-07-01
+## Encabezados
 
-¡Bienvenido a mi _nuevo blog_ sobre el aprendizaje de Astro! Aquí, voy a compartir mi viaje de aprendizaje a medida que construyo un nuevo sitio web.
+### Encabezado de tercer nivel
 
-## Lo que he conseguido
+#### Encabezado de cuarto nivel
 
-1. **Instalación de Astro**: En primer lugar, he creado un nuevo proyecto Astro y configurar mis cuentas en línea.
+## Texto Formateado
 
-2. **Creación de páginas**: Luego aprendí cómo hacer páginas creando nuevos archivos `.astro` y colocándolos en la carpeta `src/pages/`.
+Este es un texto normal.
 
-3. **Creación de publicaciones**: ¡Esta es mi primera publicación! ¡Ahora tengo páginas de Astro y publicaciónes en Markdown!
+**Texto en negrita**
 
-## Próximos pasos
+_Texto en cursiva_
 
-Terminaré el tutorial de Astro, y luego seguiré añadiendo más publicaciones. Mira este espacio para más por venir.
+~~Texto tachado~~
+
+## Listas
+
+### Lista ordenada
+
+1. Elemento 1
+2. Elemento 2
+3. Elemento 3
+
+### Lista desordenada
+
+- Elemento A
+- Elemento B
+- Elemento C
+
+## Enlaces e Imágenes
+
+[Enlace a Google](https://www.google.com)
+
+![Logo de Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png)
+
+## Citas
+
+> Esto es una cita en Markdown.
+
+## Código
+
+### Código en línea
+
+`print("Hola, mundo")`
+
+### Bloque de código
+
+```python
+def saludar():
+    print("Hola, mundo")
+```
+
+## Tablas
+
+| Nombre  | Edad | Ciudad    |
+| ------- | ---- | --------- |
+| Juan    | 25   | Madrid    |
+| María   | 30   | Barcelona |
+| Antonio | 28   | Valencia  |
+
+## Líneas Horizontales
+
+---
+
+## Notas al pie
+
+Texto con una nota al pie.[^1]
+
+[^1]: Esta es una nota al pie.
+
+## Lista de Tareas
+
+- [x] Tarea completada
+- [ ] Tarea pendiente
+
+## Fórmulas Matemáticas
+
+$E = mc^2$
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+## Bloques de Citas Multilínea
+
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+## Fin de la Página
+
+```
+
+```
