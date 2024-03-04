@@ -1,22 +1,64 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors');
-
 module.exports = {
-  darkMode: 'class',
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     colors: {
-      current: 'currentColor',
-      transparent: 'transparent',
-      white: '#ffffff',
-      black: '#000000',
-      primary: colors.stone,
-      accent: '#462fef',
-      linkedin: '#0078b6'
+      'primary': { 
+        50: '#fcfdfc', 
+        100: '#f5f7f4', 
+        200: '#e8ece5', 
+        300: '#d7ddd2', 
+        400: '#c0cbb8', 
+        500: '#a5b399', 
+        600: '#849874', 
+        700: '#5f6f52', 
+        800: '#384231', 
+        900: '#21261c', 
+        950: '#191d16', 
+      },
+    'white': { 
+        50: '#ffffff', 
+        100: '#fffffd', 
+        200: '#fffefb', 
+        300: '#fffef8', 
+        400: '#fffdf3', 
+        500: '#fefcee', 
+        600: '#fefbe8', 
+        700: '#fefae1', 
+        800: '#eacc07', 
+        900: '#605303', 
+        950: '#312b02', 
+      },
+    'accent': { 
+        50: '#fefdfd', 
+        100: '#fbf8f6', 
+        200: '#f5f0eb', 
+        300: '#ede4db', 
+        400: '#e3d5c7', 
+        500: '#d7c3ae', 
+        600: '#c9ad91', 
+        700: '#b8946f', 
+        800: '#6b5035', 
+        900: '#34271a', 
+        950: '#221a11', 
+      },
+    'secondary': { 
+        50: '#fefefd', 
+        100: '#fafaf8', 
+        200: '#f3f4ee', 
+        300: '#eaece1', 
+        400: '#dee1d1', 
+        500: '#cfd4bd', 
+        600: '#bec5a4', 
+        700: '#a9b389', 
+        800: '#5e6742', 
+        900: '#2d311f', 
+        950: '#1c1f14', 
+      },
     },
     fontFamily: {
-      sans: ['Jost', 'sans-serif'],
+      sans: ['GeneralSans', 'sans-serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],

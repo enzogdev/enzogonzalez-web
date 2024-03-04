@@ -1,6 +1,15 @@
 {
   "experience": [
     {
+      "company": "Graddle",
+      "slug": "graddle",
+      "logo": "",
+      "image": "/assets/projects/graddle.webp",
+      "date": "may. 2022 - actualidad",
+      "description": "Trabajando en proyectos de wordpress y prestashop aportando a la parte de diseño y experiencia de usuario aparte de la implementación de soluciones",
+      "jobTitle": "Mid Frontend developer"
+    },
+    {
       "company": "Blue Mountain",
       "slug": "blue-mountain",
       "logo": "",
@@ -44,15 +53,6 @@
       "date": "jun. 2019 - jun. 2021",
       "description": "Desarrollando y corrigiendo cuestiones de diseño en el frontend bajo symfony 2.8 y twig principalmente, además de utilizar JS y Jquery para complementar las funcionalidades de la aplicación y mejorar la experiencia a nuestros usuarios.",
       "jobTitle": "Junior Web Developer"
-    },
-    {
-      "company": "Fedesoft",
-      "slug": "fedesoft",
-      "logo": "",
-      "image": "/assets/projects/fedesoft.webp",
-      "date": "mar. 2019 - jul. 2019",
-      "description": "He desarrollado un rediseño de la marca a nivel estético, corrigiendo y mejorando la imagen que tienen actualmente, así como la línea visual que debe llevar el diseño de su web, la cual está en desarrollo. También he maquetado documentos pdf dinámicos con xhtml2pdf en phyton así como crear templates con jinja2.",
-      "jobTitle": "Web Designer"
     },
     {
       "company": "Silbon",
