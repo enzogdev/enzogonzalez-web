@@ -6,7 +6,7 @@ const { job } = Astro.props;
 
 <a class="job-card" href=`proyectos/${job.slug}`>
   <Bento
-    class="bg group flex h-[50vh] min-h-[300px] justify-between overflow-hidden"
+    class="bg group flex h-[40vh] min-h-[300px] justify-between overflow-hidden"
     transition:name="hero"
   >
     <article
@@ -14,10 +14,10 @@ const { job } = Astro.props;
       style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.5) 100%);"
     >
       <div class="flex justify-between">
-        <h3 class="uppercase">site and Brand development</h3>
+        <h3 class="text-2xl font-medium uppercase text-white-50">site and Brand development</h3>
       </div>
       <div>
-        <h2 class="mb-4 text-right text-8xl drop-shadow-xl">{job.company}</h2>
+        <h2 class="mb-4 text-right text-8xl font-semibold drop-shadow-xl">{job.company}</h2>
         <div
           class="h-0 text-right text-2xl opacity-0 drop-shadow-xl transition-all group-hover:h-[4em] group-hover:opacity-60"
         >
@@ -27,7 +27,7 @@ const { job } = Astro.props;
     </article>
 
     <img
-      class="absolute right-0 top-0 z-0 block h-full w-full object-cover opacity-30 transition group-hover:opacity-90"
+      class="absolute right-0 top-0 z-0 block h-full w-full object-cover saturate-50 transition group-hover:saturate-100"
       src={job.image}
     />
   </Bento>

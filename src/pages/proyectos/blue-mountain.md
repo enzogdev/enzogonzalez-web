@@ -2,6 +2,7 @@
 layout: 'src\layouts\ProyectLayout.astro'
 title: 'Blue Mountain'
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
+sections: ['concept', 'why', 'mockups']
 image:
   url: '\assets\projects\blue-mountain.webp'
   alt: 'El logotipo completo de Astro.'
@@ -88,6 +89,8 @@ Texto con una nota al pie.[^1]
 
 ## Fórmulas Matemáticas
 
+<a name="concept">concept</a>
+
 $E = mc^2$
 
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
@@ -101,5 +104,5 @@ $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 ## Fin de la Página
 
 ```
-
+hola
 ```

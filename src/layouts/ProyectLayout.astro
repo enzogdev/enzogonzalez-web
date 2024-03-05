@@ -5,24 +5,29 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
-  <Container>
-    <Bento
-      transition:name="hero"
-      class="selection:bg group flex h-[50vh] min-h-[300px] w-full justify-between overflow-hidden"
-    >
+  <Container class="mb-14 gap-8">
+    <div class="justify flex w-1/4 flex-col justify-between pt-8">
+      <div class="flex flex-col gap-2">
+        <h3 class="text-xl font-medium uppercase text-primary-500">Web app</h3>
+        <h3 class="text-xl font-medium uppercase text-primary-500">Side project</h3>
+        <h3 class="text-xl font-medium uppercase text-primary-500">User experience</h3>
+      </div>
+      <p class="text-2xl text-white-50">
+        {frontmatter.description}
+      </p>
+      <a
+        class="inline-flex w-full justify-center rounded-full bg-accent-700 px-8 py-6 text-2xl font-medium text-white-50 transition hover:bg-accent-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-700"
+        href="#">Visitar sitio</a
+      >
+    </div>
+
+    <Bento transition:name="hero" class="flex aspect-[16/9] w-3/4 justify-between overflow-hidden">
       <article
         class="absolute bottom-0 left-0 top-0 z-10 flex w-full flex-col justify-between p-4 lg:p-12"
         style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.5) 100%);"
       >
-        <div class="flex justify-between">
-          <h3 class="uppercase">site and Brand development</h3>
-        </div>
-        <div>
-          <h1 class="mb-4 text-right text-8xl drop-shadow-xl">{frontmatter.title}</h1>
-          <div class="text-right text-2xl opacity-60 drop-shadow-xl">
-            {frontmatter.description}
-          </div>
-        </div>
+        <h3 class="uppercase">site and Brand development</h3>
+        <h1 class="mb-4 text-right text-8xl font-semibold drop-shadow-xl">{frontmatter.title}</h1>
       </article>
 
       <img
@@ -32,9 +37,38 @@ const { frontmatter } = Astro.props;
       />
     </Bento>
   </Container>
+
   <Container>
-    <div class="md-content p-4 lg:p-12">
-      <slot />
+    <div>
+      <article class="mb-8 flex gap-8">
+        <h2 class="w-1/4 text-5xl font-medium">Introducción</h2>
+        <p class="my-4 w-3/4 text-xl leading-7 text-primary-500">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </p>
+      </article>
+      <hr class="text-primary-800" />
+      <div class="mt-14 flex gap-8">
+        <nav
+          class="sticky top-20 flex w-1/4 flex-col gap-2 place-self-start text-xl uppercase text-primary-700"
+        >
+          {
+            frontmatter.sections.map((section: string, index: number) => (
+              <a class="font-medium no-underline" href={'#' + section}>
+                {index} - {section}
+              </a>
+            ))
+          }
+        </nav>
+
+        <div class="md-content w-3/4">
+          <slot />
+        </div>
+      </div>
     </div>
   </Container>
 </Layout>
@@ -44,7 +78,7 @@ const { frontmatter } = Astro.props;
     @apply mb-4 text-4xl font-bold;
   }
   .md-content h2 {
-    @apply mb-3 text-3xl font-bold;
+    @apply mb-3 text-5xl font-medium;
   }
   .md-content h3 {
     @apply mb-2 text-2xl font-bold;
@@ -60,7 +94,7 @@ const { frontmatter } = Astro.props;
   }
 
   .md-content p {
-    @apply my-4 text-base leading-6;
+    @apply my-4 text-xl leading-7 text-primary-500;
   }
 
   .md-content ul,

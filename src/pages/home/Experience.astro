@@ -7,12 +7,12 @@ import { Bento, Container, ProjectCard } from '@ui';
   <section id="horizontal-scroll-section">
     <div class="card-wrap-sticky">
       <div class="card-wrap flex gap-4">
-        <Bento class="bg-transparent">
-          <h2 class="text-6xl font-medium tracking-tight">
-            <span class="opacity-60">Improved</span>
-            <br />projects
+        <div class="p-4">
+          <h2 class="text-5xl font-medium">
+            <span class="text-white-50">Proyectos</span>
+            <br /><span class="text-primary-500">destacados</span>
           </h2>
-        </Bento>
+        </div>
         {experience.map((job, index) => <ProjectCard job={job} />)}
       </div>
     </div>
@@ -20,6 +20,12 @@ import { Bento, Container, ProjectCard } from '@ui';
 </Container>
 
 <style>
+  #horizontal-scroll-section {
+    background-image: url('/assets/157.svg');
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: left;
+  }
   @supports (animation-timeline: view()) {
     @keyframes move {
       to {

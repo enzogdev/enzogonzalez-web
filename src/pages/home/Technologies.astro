@@ -6,26 +6,16 @@ import { Bento, Container, Pill } from '@ui';
 <Container>
   <Bento class="relative flex-col gap-8 overflow-hidden">
     <div class="flex flex-col lg:flex-row">
-      <h2 class="mb-4 w-full text-6xl font-medium tracking-tight lg:w-2/5">
-        <span class="opacity-60">Techs and</span><br /> Software
-      </h2>
-      <div class="flex w-full flex-col gap-12 lg:w-3/5">
-        <p class="text-xl font-medium">
-          A lo largo de mi carrera he aprendido a utilizar gran cantidad de software y tecnologías,
-          pero a día de hoy lo más valioso que tengo es mi capacidad para adaptarme a nuevos retos
+      <div class="flex w-full flex-col gap-12 lg:w-3/4">
+        <h3 class="text-2xl font-medium uppercase text-primary-500">Tecnologías y Software</h3>
+        <p class="text-5xl font-medium">
+          Buscamos el mejor enfoque para la selección de tecnologías y lenguajes que se adapten a
+          cada proyecto, para ello contamos con un amplio stack.
         </p>
-        <ul class="flex flex-wrap gap-4">
-          {
-            technologies.map((tech) => (
-              <li class="shrink-0">
-                <Pill title={tech.name} icon={tech.icon} />
-              </li>
-            ))
-          }
-        </ul>
       </div>
+      <div class="w-1/4"></div>
     </div>
-    <svg
+    <!-- <svg
       class="spin absolute left-[0] top-[50px] -z-10 md:left-[-320px] lg:top-0"
       width="1000"
       height="1000"
@@ -38,7 +28,7 @@ import { Bento, Container, Pill } from '@ui';
       <text fill="#fff">
         <textPath xlink:href="#circlePath">✏️DESIGN ⌨️ DEVELOP 🥳 USER EXPERIENCE</textPath>
       </text>
-    </svg>
+    </svg> -->
   </Bento>
 </Container>
 
