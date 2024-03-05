@@ -8,9 +8,11 @@ const { frontmatter } = Astro.props;
   <Container class="mb-14 gap-8">
     <div class="justify flex w-1/4 flex-col justify-between pt-8">
       <div class="flex flex-col gap-2">
-        <h3 class="text-xl font-medium uppercase text-primary-500">Web app</h3>
-        <h3 class="text-xl font-medium uppercase text-primary-500">Side project</h3>
-        <h3 class="text-xl font-medium uppercase text-primary-500">User experience</h3>
+        {
+          frontmatter.tags.map((tag: string) => (
+            <h3 class="text-xl font-medium uppercase text-primary-500">{tag}</h3>
+          ))
+        }
       </div>
       <p class="text-2xl text-white-50">
         {frontmatter.description}
@@ -43,12 +45,7 @@ const { frontmatter } = Astro.props;
       <article class="mb-8 flex gap-8">
         <h2 class="w-1/4 text-5xl font-medium">Introducción</h2>
         <p class="my-4 w-3/4 text-xl leading-7 text-primary-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
+          {frontmatter.introduction}
         </p>
       </article>
       <hr class="text-primary-800" />
@@ -59,7 +56,7 @@ const { frontmatter } = Astro.props;
           {
             frontmatter.sections.map((section: string, index: number) => (
               <a class="font-medium no-underline" href={'#' + section}>
-                {index} - {section}
+                {index + 1} - {section}
               </a>
             ))
           }
