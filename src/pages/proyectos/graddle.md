@@ -1,5 +1,5 @@
 ---
-layout: 'src\layouts\ProyectLayout.astro'
+layout: 'src/layouts/ProyectLayout.astro'
 title: 'Graddle'
 link: 'https://graddle.vercel.app/'
 description: 'Herramienta para crear degradados en css con una interfaz drag and drop muy sencila'

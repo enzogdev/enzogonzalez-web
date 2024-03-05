@@ -1,5 +1,5 @@
 ---
-layout: 'src\layouts\ProyectLayout.astro'
+layout: 'src/layouts/ProyectLayout.astro'
 title: 'Blue Mountain'
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 sections: ['concept', 'why', 'mockups']
