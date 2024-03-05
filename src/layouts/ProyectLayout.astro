@@ -19,8 +19,10 @@ const { frontmatter } = Astro.props;
       </p>
       <a
         class="inline-flex w-full justify-center rounded-full bg-accent-700 px-8 py-6 text-2xl font-medium text-white-50 transition hover:bg-accent-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-700"
-        href="#">Visitar sitio</a
-      >
+        href={frontmatter.link}
+        target="_blank"
+        >Visitar sitio
+      </a>
     </div>
 
     <Bento transition:name="hero" class="flex aspect-[16/9] w-3/4 justify-between overflow-hidden">
