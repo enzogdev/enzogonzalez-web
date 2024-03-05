@@ -1,0 +1,18 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import CVHeader from './cv/CVHeader.astro';
+import CVSidebar from './cv/CVSidebar.astro';
+import CVMain from './cv/CVMain.astro';
+import { Container } from '@ui';
+---
+
+<Layout
+  title="Curriculum Vitae"
+  description="Aquí os presento mi curriculum actualizado con las empresas en las que he participado, formación y tecnologías"
+>
+  <CVHeader />
+  <Container class="flex gap-14">
+    <CVSidebar />
+    <CVMain />
+  </Container>
+</Layout>
