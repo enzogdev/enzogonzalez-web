@@ -27,6 +27,8 @@ const { job } = Astro.props;
     </article>
 
     <img
+      decoding="async"
+      loading="lazy"
       class="absolute right-0 top-0 z-0 block h-full w-full object-cover saturate-50 transition group-hover:saturate-100"
       src={job.image}
     />

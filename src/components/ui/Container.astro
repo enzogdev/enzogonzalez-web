@@ -3,7 +3,7 @@ const { class: className, ...rest } = Astro.props;
 ---
 
 <section
-  class:list={['mb-4 flex flex-col gap-4 px-4 lg:mx-auto lg:max-w-7xl lg:flex-row', className]}
+  class:list={['mb-4 flex gap-4 px-4 lg:mx-auto lg:max-w-7xl lg:flex-row ', className]}
   {...rest}
 >
   <slot />

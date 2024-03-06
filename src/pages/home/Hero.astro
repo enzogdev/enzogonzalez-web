@@ -13,7 +13,7 @@ import { Bento, Container } from '@ui';
     </div>
     <div class="flex flex-col gap-12">
       <h1 class="">
-        <img class="w-full md:min-w-[70vw]" src="/assets/enzo-gonzalez.svg" />
+        <img class="w-full md:w-[70vw] md:max-w-[900px]" src="/assets/enzo-gonzalez.svg" />
       </h1>
       <a
         href="mailto:info@enzogonzalez.es"
@@ -31,6 +31,7 @@ import { Bento, Container } from '@ui';
 <style>
   @media not all and (min-width: 768px) {
     .hero-section {
+      /*  TODO investigar las medidas correctas para mobile, actualmente se reescala la imagen */
       height: calc(100lvh - 72px); /* 72px header height */
     }
   }

@@ -2,9 +2,9 @@
 import { Bento, Container, Linkedin, Github } from '@ui';
 ---
 
-<Container>
-  <Bento class="w-3/5">
-    <p class="text-balance text-3xl font-medium lg:text-5xl">
+<Container class="relative flex-row items-center">
+  <Bento class="z-10 w-[70vw] lg:w-full">
+    <p class="text-balance text-2xl font-medium md:text-5xl">
       Especializado en crear sitios webs de alto rendimiento con un bajo uso de javascript.<span
         class="text-primary-500"
       >
@@ -12,5 +12,8 @@ import { Bento, Container, Linkedin, Github } from '@ui';
       >
     </p>
   </Bento>
-  <img class="h-full w-2/5 gap-4 lg:flex-col" src="/assets/Vector.svg" />
+  <img
+    class="absolute right-5 z-0 h-full w-2/6 gap-4 p-3 md:p-0 lg:static"
+    src="/assets/Vector.svg"
+  />
 </Container>
