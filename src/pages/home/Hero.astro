@@ -1,19 +1,40 @@
 ---
-import { Bento, Avatar, Container } from '@ui';
+import { Bento, Container } from '@ui';
 ---
 
-<Container>
-  <div class="z-10 flex flex-col gap-4 py-12 lg:w-1/3">
-    <h3 class="text-2xl font-medium uppercase text-primary-500">Frontend</h3>
-    <h3 class="text-2xl font-medium uppercase text-primary-500">User Experience</h3>
-    <h3 class="text-2xl font-medium uppercase text-primary-500">Web Design</h3>
-    <h1 class="text-[165px] font-black uppercase leading-none">enzo gonzález</h1>
-    <a
-      href="mailto:info@enzogonzalez.es"
-      class="inline-flex w-full justify-center rounded-full bg-accent-700 px-8 py-6 text-2xl font-medium text-white-50 transition hover:bg-accent-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-700"
-    >
-      info@enzogonzalez.es
-    </a>
+<Container class="hero-section relative flex-nowrap md:w-full">
+  <div
+    class="z-10 flex h-full flex-col flex-nowrap justify-between gap-8 py-12 font-medium md:w-1/3"
+  >
+    <div class="flex flex-col gap-4 text-2xl uppercase text-primary-500">
+      <h3>Frontend</h3>
+      <h3>User Experience</h3>
+      <h3>Web Design</h3>
+    </div>
+    <div class="flex flex-col gap-12">
+      <h1 class="">
+        <img class="w-full md:min-w-[70vw]" src="/assets/enzo-gonzalez.svg" />
+      </h1>
+      <a
+        href="mailto:info@enzogonzalez.es"
+        class="inline-flex w-full justify-center rounded-full bg-accent-700 px-8 py-6 text-2xl font-medium text-white-50 transition hover:bg-accent-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-700"
+      >
+        info@enzogonzalez.es
+      </a>
+    </div>
   </div>
-  <Bento class="z-0 bg-cover lg:w-2/3" style="background-image:url('/assets/hero.webp')" />
+  <Bento
+    class="absolute inset-x-10 bottom-48 top-20 z-0 bg-cover md:static md:aspect-auto md:w-2/3"
+    style="background-image:url('/assets/hero.webp')"
+  />
 </Container>
+<style>
+  @media not all and (min-width: 768px) {
+    .hero-section {
+      height: calc(100dvh - 72px); /* 72px header height */
+    }
+  }
+  .hero-section {
+    flex-direction: row;
+  }
+</style>
