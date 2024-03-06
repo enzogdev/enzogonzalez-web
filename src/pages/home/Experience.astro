@@ -4,16 +4,16 @@ import { Bento, Container, ProjectCard } from '@ui';
 ---
 
 <Container>
-  <section id="horizontal-scroll-section">
+  <section id="horizontal-scroll-section" class="w-full">
     <div class="card-wrap-sticky">
-      <div class="card-wrap flex gap-4">
+      <div class="card-wrap flex flex-col gap-4 md:flex-row">
         <div class="p-4">
-          <h2 class="text-5xl font-medium">
+          <h2 class="text-right text-5xl font-medium md:text-left">
             <span class="text-white-50">Proyectos</span>
             <br /><span class="text-primary-500">destacados</span>
           </h2>
         </div>
-        {experience.map((job, index) => <ProjectCard job={job} />)}
+        {experience.map((job) => <ProjectCard job={job} />)}
       </div>
     </div>
   </section>
@@ -26,55 +26,60 @@ import { Bento, Container, ProjectCard } from '@ui';
     background-size: 50% 50%;
     background-position: left;
   }
-  @supports (animation-timeline: view()) {
-    @keyframes move {
-      to {
-        transform: translateX(calc(-100% + 78rem)); /* 80rem is container, 1rem is gap */
-        left: 0px;
+
+  @media not all and (max-width: 768px) {
+    @supports (animation-timeline: view()) {
+      @keyframes move {
+        to {
+          transform: translateX(calc(-100% + 78rem)); /* 80rem is container, 1rem is gap */
+          left: 0px;
+        }
       }
-    }
-    @keyframes parallax {
-      to {
-        object-position: 0 0;
+
+      @keyframes parallax {
+        to {
+          object-position: 0 0;
+        }
       }
-    }
-    #horizontal-scroll-section {
-      --items-count: 7;
-      --items-width: 48rem;
 
-      /* Ajusta el ancho del contenedor de scroll */
-      width: calc(var(--items-count) * var(--items-width));
-      height: 200vh;
-      /* Asegura que la animación cubra el ancho total del contenedor de scroll */
-      view-timeline-name: --horizontal-scroll-section;
-      view-timeline-axis: block;
-    }
+      #horizontal-scroll-section {
+        --items-count: 7;
+        --items-width: 48rem;
 
-    .card-wrap-sticky {
-      position: sticky;
-      top: 20%;
-    }
-
-    .card-wrap {
-      width: calc(var(--items-width) * var(--items-count));
-      animation: linear move forwards;
-      animation-timeline: --horizontal-scroll-section;
-      animation-range: contain -20% contain 139%;
-    }
-    /* Styles for parallax effect */
-
-    @keyframes adjust-image {
-      0% {
-        object-position: 100% 0;
+        /* Ajusta el ancho del contenedor de scroll */
+        width: calc(var(--items-count) * var(--items-width));
+        height: 200vh;
+        /* Asegura que la animación cubra el ancho total del contenedor de scroll */
+        view-timeline-name: --horizontal-scroll-section;
+        view-timeline-axis: block;
       }
-      100% {
-        object-position: 0 0;
-      }
-    }
 
-    .job-card img {
-      animation: linear adjust-image forwards;
-      animation-timeline: --horizontal-scroll-section;
+      .card-wrap-sticky {
+        position: sticky;
+        top: 20%;
+      }
+
+      .card-wrap {
+        width: calc(var(--items-width) * var(--items-count));
+        animation: linear move forwards;
+        animation-timeline: --horizontal-scroll-section;
+        animation-range: contain -20% contain 139%;
+      }
+      /* Styles for parallax effect */
+
+      @keyframes adjust-image {
+        0% {
+          object-position: 100% 0;
+        }
+        100% {
+          object-position: 0 0;
+        }
+      }
+
+      .job-card img {
+        animation: linear adjust-image forwards;
+        animation-timeline: --horizontal-scroll-section;
+      }
     }
   }
 </style>

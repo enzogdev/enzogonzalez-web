@@ -5,8 +5,8 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
-  <Container class="mb-14 gap-8">
-    <div class="justify flex w-1/4 flex-col justify-between pt-8">
+  <Container class="md:flex-lg mb-14 flex-col-reverse gap-8">
+    <div class="justify flex flex-col justify-between gap-8 pt-8 md:w-1/4">
       <div class="flex flex-col gap-2">
         {
           frontmatter.tags.map((tag: string) => (
@@ -25,13 +25,18 @@ const { frontmatter } = Astro.props;
       </a>
     </div>
 
-    <Bento transition:name="hero" class="flex aspect-[16/9] w-3/4 justify-between overflow-hidden">
+    <Bento
+      transition:name="hero"
+      class="flex aspect-[16/9] justify-between overflow-hidden md:w-3/4"
+    >
       <article
         class="absolute bottom-0 left-0 top-0 z-10 flex w-full flex-col justify-between p-4 lg:p-12"
         style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.5) 100%);"
       >
         <h3 class="uppercase">site and Brand development</h3>
-        <h1 class="mb-4 text-right text-8xl font-semibold drop-shadow-xl">{frontmatter.title}</h1>
+        <h1 class="mb-4 text-right text-5xl font-semibold drop-shadow-xl md:text-8xl">
+          {frontmatter.title}
+        </h1>
       </article>
 
       <img
@@ -51,9 +56,9 @@ const { frontmatter } = Astro.props;
         </p>
       </article>
       <hr class="text-primary-800" />
-      <div class="mt-14 flex gap-8">
+      <div class="mt-14 flex flex-col gap-8 md:flex-row">
         <nav
-          class="sticky top-20 flex w-1/4 flex-col gap-2 place-self-start text-xl uppercase text-primary-700"
+          class="top-20 flex flex-col gap-2 place-self-start text-xl uppercase text-primary-700 md:sticky md:w-1/4"
         >
           {
             frontmatter.sections.map((section: string, index: number) => (
@@ -64,7 +69,7 @@ const { frontmatter } = Astro.props;
           }
         </nav>
 
-        <div class="md-content w-3/4">
+        <div class="md-content w-full md:w-3/4">
           <slot />
         </div>
       </div>
